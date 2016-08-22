@@ -8,7 +8,7 @@
 m = Map("dns-forwarder", translate("DNS Forwarder"),
 	translate("使用 TCP 转发 DNS 查询"))
 
-s = m:section(TypedSection, "dns-forwarder", translate("AutoSSH 设置"))
+s = m:section(TypedSection, "dns-forwarder", translate("DNS 转发设置"))
 s.anonymous   = true
 
 o = s:option(Flag, "enable", translate("Enable"))
