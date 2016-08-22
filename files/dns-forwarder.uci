@@ -1,0 +1,8 @@
+#!/bin/sh
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@dns-forwarder[-1]
+	add ucitrack dns-forwarder
+	set ucitrack.@dns-forwarder[-1].init=dns-forwarder
+	commit ucitrack
+EOF
+exit 0
