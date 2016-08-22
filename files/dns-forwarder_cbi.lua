@@ -5,7 +5,7 @@
  See /LICENSE for more information.
 --]]
 
-m = Map("dns-forwarder", translate("DNS Forwarder"),
+m = Map("dns-forwarder", translate("DNS 转发"),
 	translate("使用 TCP 转发 DNS 查询"))
 
 s = m:section(TypedSection, "dns-forwarder", translate("DNS 转发设置"))
