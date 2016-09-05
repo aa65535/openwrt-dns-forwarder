@@ -6,5 +6,5 @@ DNS-Forwarder for OpenWrt
 Forwarding DNS queries on TCP transport. For more information see the [Wiki][0].
 
  [0]: https://github.com/aa65535/openwrt-chinadns/wiki/Use-DNS-Forwarder
- [2]: https://github.com/aa65535/openwrt-dns-forwarder/releases
+ [2]: https://github.com/aa65535/openwrt-dns-forwarder/releases/latest
  [B]: https://img.shields.io/badge/Download-v1.0.2-blue.svg
