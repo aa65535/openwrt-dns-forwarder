@@ -19,7 +19,7 @@ DNS-Forwarder for OpenWrt
    cd OpenWrt-SDK-ar71xx-*
    # 获取 Makefile
    git clone https://github.com/aa65535/openwrt-dns-forwarder.git package/dns-forwarder
-   # 选择要编译的包 Network -> ChinaDNS
+   # 选择要编译的包 Network -> dns-forwarder
    make menuconfig
    # 开始编译
    make package/dns-forwarder/compile V=99
