@@ -27,5 +27,5 @@ DNS-Forwarder for OpenWrt
 
  [1]: https://github.com/aa65535/hev-dns-forwarder
  [2]: https://github.com/aa65535/openwrt-dns-forwarder/releases/latest
- [B]: https://img.shields.io/badge/Download-v1.1.0-blue.svg
+ [B]: https://img.shields.io/badge/Download-v1.1.1-blue.svg
  [S]: https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
