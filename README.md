@@ -25,7 +25,18 @@ DNS-Forwarder for OpenWrt
    make package/dns-forwarder/compile V=99
    ```
 
+配置
+---
+
+ - 默认 DNS 服务器端口为 `5300`, 可使用 [LuCI][L] 进行配置  
+
+ - 建议作为 [ChinaDNS][3] 的上游服务器使用, 配置方法参考 [Wiki][W]  
+
+
  [1]: https://github.com/aa65535/hev-dns-forwarder
  [2]: https://github.com/aa65535/openwrt-dns-forwarder/releases/latest
- [B]: https://img.shields.io/badge/Download-v1.1.1-blue.svg
+ [3]: https://github.com/aa65535/openwrt-chinadns
+ [B]: https://img.shields.io/github/release/aa65535/openwrt-dns-forwarder.svg
  [S]: https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
+ [L]: https://github.com/aa65535/openwrt-dist-luci
+ [W]: https://github.com/aa65535/openwrt-chinadns/wiki/Use-DNS-Forwarder
