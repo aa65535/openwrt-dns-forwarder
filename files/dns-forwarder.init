@@ -8,9 +8,7 @@
 
 START=75
 
-SERVICE_USE_PID=1
-SERVICE_WRITE_PID=1
-SERVICE_DAEMONIZE=1
+USE_PROCD=1
 
 start_instance() {
 	local enable
@@ -22,17 +20,22 @@ start_instance() {
 	config_get listen_addr $1 listen_addr
 	config_get listen_port $1 listen_port
 	config_get dns_servers $1 dns_servers
-	service_start /usr/bin/dns-forwarder \
-		-b ${listen_addr:-0.0.0.0} \
-		-p ${listen_port:-5300} \
-		-s ${dns_servers:-8.8.8.8}
+
+	procd_open_instance
+	procd_set_param respawn
+	procd_set_param stderr 1
+	procd_set_param command /usr/bin/dns-forwarder
+	procd_append_param command -b ${listen_addr:-0.0.0.0}
+	procd_append_param command -p ${listen_port:-5300}
+	procd_append_param command -s ${dns_servers:-8.8.8.8}
+	procd_close_instance
 }
 
-start() {
+start_service() {
 	config_load dns-forwarder
 	config_foreach start_instance dns-forwarder
 }
 
-stop() {
-	service_stop /usr/bin/dns-forwarder
+service_triggers() {
+	procd_add_reload_trigger "dns-forwarder"
 }
